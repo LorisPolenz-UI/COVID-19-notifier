@@ -2,9 +2,6 @@
 const needle = require('needle');
 const dotenv = require('dotenv').config();
 
-// The code below sets the bearer token from your environment variables
-// To set environment variables on Mac OS X, run the export command below from the terminal: 
-// export BEARER_TOKEN='YOUR-TOKEN' 
 const token = process.env.BEARER_TOKEN;
 
 const endpointUrl = 'https://api.twitter.com/2/tweets/search/recent';
@@ -56,10 +53,10 @@ async function getTweet() {
 
 
 
-
+//send mail every day at  12:30
 /* setInterval(() => {
     var date = new Date();
-    if(date.getHours() == 15 && date.getMinutes() == 25) {
+    if(date.getHours() == 12 && date.getMinutes() == 30) {
 
         (async () => {
 
@@ -104,12 +101,12 @@ async function getTweet() {
 var sendMessageTo = [
     {
         "emailAddress": {
-            "address": "loris.polenz@swisscom.com"
+            "address": "e.mail@address.com"
         }
     },
     {
         "emailAddress": {
-            "address": "loris.polenz@edu.tbz.ch"
+            "address": "e.mail@address.com"
         }
     }
     
